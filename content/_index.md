@@ -7,7 +7,13 @@ chapter: false
 
 # Internship Report – MalScanAI Project
 
+
 This website documents participation in the **AWS FCAJ Bootcamp 2026**, the learning activities completed during the internship, and the deployment of the **MalScanAI** project on AWS.
+
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="images/avatar-thi.jpg" alt="Avatar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
 
 ## Student information
 

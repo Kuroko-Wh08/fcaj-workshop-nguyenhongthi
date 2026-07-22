@@ -16,11 +16,11 @@ pre: " <b> 1.7. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Học cách sử dụng AWS Secrets Manager với RDS và Fargate. | 15/06/2026 | 15/06/2026 | — |
-| 2 | Học và thực hành với Amazon ECS. | 17/06/2026 | 17/06/2026 | — |
-| 3 | Sử dụng VPC Endpoint để truy cập Amazon S3 an toàn. | 21/06/2026 | 21/06/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Học cách sử dụng AWS Secrets Manager với RDS và Fargate. | 15/06/2026 | 15/06/2026 |
+| 2 | Học và thực hành với Amazon ECS. | 17/06/2026 | 17/06/2026 |
+| 3 | Sử dụng VPC Endpoint để truy cập Amazon S3 an toàn. | 21/06/2026 | 21/06/2026 |
 
 ## Kết quả đạt được tuần 7
 

@@ -16,11 +16,11 @@ pre: " <b> 1.4. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Thực hành triển khai hệ thống giám sát Amazon CloudWatch. | 25/05/2026 | 25/05/2026 | — |
-| 2 | Quản lý DNS bằng Amazon Route 53. | 29/05/2026 | 29/05/2026 | — |
-| 3 | Học và thực hành thao tác dòng lệnh bằng AWS CLI. | 31/05/2026 | 31/05/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Thực hành triển khai hệ thống giám sát Amazon CloudWatch. | 25/05/2026 | 25/05/2026 |
+| 2 | Quản lý DNS bằng Amazon Route 53. | 29/05/2026 | 29/05/2026 |
+| 3 | Học và thực hành thao tác dòng lệnh bằng AWS CLI. | 31/05/2026 | 31/05/2026 |
 
 ## Kết quả đạt được tuần 4
 

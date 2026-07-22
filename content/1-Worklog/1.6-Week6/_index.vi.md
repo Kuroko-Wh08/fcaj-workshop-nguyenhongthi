@@ -15,11 +15,11 @@ pre: " <b> 1.6. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Tìm hiểu điện toán biên với CloudFront và Lambda@Edge. | 09/06/2026 | 09/06/2026 | — |
-| 2 | Thực hành khởi tạo và quản lý Windows Server trên AWS. | 10/06/2026 | 10/06/2026 | — |
-| 3 | Tham dự Meetup với các nội dung như dịch vụ rút gọn URL và môi trường DevOps. | 13/06/2026 | 13/06/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Tìm hiểu điện toán biên với CloudFront và Lambda@Edge. | 09/06/2026 | 09/06/2026 |
+| 2 | Thực hành khởi tạo và quản lý Windows Server trên AWS. | 10/06/2026 | 10/06/2026 |
+| 3 | Tham dự Meetup với các nội dung như dịch vụ rút gọn URL và môi trường DevOps. | 13/06/2026 | 13/06/2026 |
 
 ## Kết quả đạt được tuần 6
 

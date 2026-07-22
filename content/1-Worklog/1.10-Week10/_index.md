@@ -15,10 +15,10 @@ pre: " <b> 1.10. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Write a blog post about using an IAM role instead of access keys on EC2. | 08/07/2026 | 08/07/2026 | — |
-| 2 | Attend a Meetup featuring a Cloud Architect competition, AWS Security Agent, and AWS certification guidance. | 11/07/2026 | 11/07/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Write a blog post about using an IAM role instead of access keys on EC2. | 08/07/2026 | 08/07/2026 |
+| 2 | Attend a Meetup featuring a Cloud Architect competition, AWS Security Agent, and AWS certification guidance. | 11/07/2026 | 11/07/2026 |
 
 ## Week 10 outcomes
 

@@ -17,12 +17,12 @@ pre: " <b> 1.2. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Learn how to manage accounts and permissions with IAM. | 12/05/2026 | 12/05/2026 | — |
-| 2 | Study cloud networking with Amazon VPC. | 13/05/2026 | 13/05/2026 | — |
-| 3 | Learn and deploy a virtual server with Amazon EC2. | 16/05/2026 | 16/05/2026 | — |
-| 4 | Practice hosting a static website with Amazon S3. | 17/05/2026 | 17/05/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Learn how to manage accounts and permissions with IAM. | 12/05/2026 | 12/05/2026 |
+| 2 | Study cloud networking with Amazon VPC. | 13/05/2026 | 13/05/2026 |
+| 3 | Learn and deploy a virtual server with Amazon EC2. | 16/05/2026 | 16/05/2026 |
+| 4 | Practice hosting a static website with Amazon S3. | 17/05/2026 | 17/05/2026 |
 
 ## Week 2 outcomes
 

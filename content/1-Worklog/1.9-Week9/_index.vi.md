@@ -16,11 +16,11 @@ pre: " <b> 1.9. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Triển khai tự động hóa Serverless bằng AWS Lambda. | 29/06/2026 | 29/06/2026 | — |
-| 2 | Thực hành viết Frontend gọi Amazon API Gateway. | 02/07/2026 | 02/07/2026 | — |
-| 3 | Tìm hiểu và vẽ kiến trúc dự án MalScanAI. | Trong tuần | Trong tuần | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Triển khai tự động hóa Serverless bằng AWS Lambda. | 29/06/2026 | 29/06/2026 |
+| 2 | Thực hành viết Frontend gọi Amazon API Gateway. | 02/07/2026 | 02/07/2026 |
+| 3 | Tìm hiểu và vẽ kiến trúc dự án MalScanAI. | Trong tuần | Trong tuần |
 
 ## Kết quả đạt được tuần 9
 

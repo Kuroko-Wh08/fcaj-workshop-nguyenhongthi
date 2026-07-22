@@ -16,11 +16,11 @@ pre: " <b> 1.5. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Học cách tạo cơ sở dữ liệu bằng Amazon DynamoDB. | 02/06/2026 | 02/06/2026 | — |
-| 2 | Tạo bộ nhớ đệm bằng Amazon ElastiCache. | 04/06/2026 | 04/06/2026 | — |
-| 3 | Học và thực hành phân phối nội dung bằng Amazon CloudFront. | 06/06/2026 | 06/06/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Học cách tạo cơ sở dữ liệu bằng Amazon DynamoDB. | 02/06/2026 | 02/06/2026 |
+| 2 | Tạo bộ nhớ đệm bằng Amazon ElastiCache. | 04/06/2026 | 04/06/2026 |
+| 3 | Học và thực hành phân phối nội dung bằng Amazon CloudFront. | 06/06/2026 | 06/06/2026 |
 
 ## Kết quả đạt được tuần 5
 

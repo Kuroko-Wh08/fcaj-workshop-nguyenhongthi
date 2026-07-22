@@ -16,11 +16,11 @@ pre: " <b> 1.8. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Learn how to protect web applications and APIs with AWS WAF. | 23/06/2026 | 23/06/2026 | — |
-| 2 | Study event management and notifications with Amazon SQS and Amazon SNS. | 24/06/2026 | 24/06/2026 | — |
-| 3 | Study and practice identity management with Amazon Cognito. | 27/06/2026 | 27/06/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Learn how to protect web applications and APIs with AWS WAF. | 23/06/2026 | 23/06/2026 |
+| 2 | Study event management and notifications with Amazon SQS and Amazon SNS. | 24/06/2026 | 24/06/2026 |
+| 3 | Study and practice identity management with Amazon Cognito. | 27/06/2026 | 27/06/2026 |
 
 ## Week 8 outcomes
 

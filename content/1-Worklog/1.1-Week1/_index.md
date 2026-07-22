@@ -15,11 +15,11 @@ pre: " <b> 1.1. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Attend the AWS FCAJ Bootcamp 2026 program launch meeting. | 05/05/2026 | 05/05/2026 | — |
-| 2 | Create an AWS account and complete the initial account setup tasks. | 07/05/2026 | 07/05/2026 | — |
-| 3 | Create cost alerts with AWS Budgets. | 08/05/2026 | 08/05/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Attend the AWS FCAJ Bootcamp 2026 program launch meeting. | 05/05/2026 | 05/05/2026 |
+| 2 | Create an AWS account and complete the initial account setup tasks. | 07/05/2026 | 07/05/2026 |
+| 3 | Create cost alerts with AWS Budgets. | 08/05/2026 | 08/05/2026 |
 
 ## Week 1 outcomes
 

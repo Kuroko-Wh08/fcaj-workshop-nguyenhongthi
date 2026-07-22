@@ -15,11 +15,11 @@ pre: " <b> 1.1. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Tham dự buổi họp triển khai chương trình AWS FCAJ Bootcamp 2026. | 05/05/2026 | 05/05/2026 | — |
-| 2 | Tạo tài khoản AWS và hoàn thành các nhiệm vụ ban đầu sau khi tạo tài khoản. | 07/05/2026 | 07/05/2026 | — |
-| 3 | Tạo cảnh báo chi phí bằng AWS Budgets. | 08/05/2026 | 08/05/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Tham dự buổi họp triển khai chương trình AWS FCAJ Bootcamp 2026. | 05/05/2026 | 05/05/2026 |
+| 2 | Tạo tài khoản AWS và hoàn thành các nhiệm vụ ban đầu sau khi tạo tài khoản. | 07/05/2026 | 07/05/2026 |
+| 3 | Tạo cảnh báo chi phí bằng AWS Budgets. | 08/05/2026 | 08/05/2026 |
 
 ## Kết quả đạt được tuần 1
 

@@ -17,12 +17,12 @@ pre: " <b> 1.2. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Học cách quản lý tài khoản với IAM. | 12/05/2026 | 12/05/2026 | — |
-| 2 | Học kiến thức về mạng với Amazon VPC. | 13/05/2026 | 13/05/2026 | — |
-| 3 | Học và triển khai máy chủ ảo bằng Amazon EC2. | 16/05/2026 | 16/05/2026 | — |
-| 4 | Thực hành hosting website tĩnh bằng Amazon S3. | 17/05/2026 | 17/05/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Học cách quản lý tài khoản với IAM. | 12/05/2026 | 12/05/2026 |
+| 2 | Học kiến thức về mạng với Amazon VPC. | 13/05/2026 | 13/05/2026 |
+| 3 | Học và triển khai máy chủ ảo bằng Amazon EC2. | 16/05/2026 | 16/05/2026 |
+| 4 | Thực hành hosting website tĩnh bằng Amazon S3. | 17/05/2026 | 17/05/2026 |
 
 ## Kết quả đạt được tuần 2
 

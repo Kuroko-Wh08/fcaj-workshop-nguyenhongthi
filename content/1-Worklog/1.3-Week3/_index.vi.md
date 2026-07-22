@@ -17,11 +17,11 @@ pre: " <b> 1.3. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Học kiến thức cơ bản về Amazon RDS. | 18/05/2026 | 18/05/2026 | — |
-| 2 | Sử dụng Amazon Lightsail và triển khai container trên Lightsail Containers. | 19/05/2026 | 19/05/2026 | — |
-| 3 | Triển khai mở rộng bằng EC2 Auto Scaling. | 23/05/2026 | 23/05/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Học kiến thức cơ bản về Amazon RDS. | 18/05/2026 | 18/05/2026 |
+| 2 | Sử dụng Amazon Lightsail và triển khai container trên Lightsail Containers. | 19/05/2026 | 19/05/2026 |
+| 3 | Triển khai mở rộng bằng EC2 Auto Scaling. | 23/05/2026 | 23/05/2026 |
 
 ## Kết quả đạt được tuần 3
 

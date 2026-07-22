@@ -7,7 +7,14 @@ chapter: false
 
 # Báo cáo thực tập – Dự án MalScanAI
 
+
+
 Website này được sử dụng để ghi lại quá trình tham gia **AWS FCAJ Bootcamp 2026**, các hoạt động học tập và phần triển khai dự án **MalScanAI** trên hạ tầng AWS.
+
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="images/avatar-thi.jpg" alt="Avatar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
 
 ## Thông tin sinh viên
 
@@ -23,9 +30,6 @@ Website này được sử dụng để ghi lại quá trình tham gia **AWS FCA
 | Vị trí thực tập | Workforce Bootcamp – First Cloud AI Journey |
 | Thời gian thực tập | Từ ngày 05/05/2026 đến ngày 26/07/2026 |
 
-{{% notice warning %}}
-Trang này có chứa số điện thoại và địa chỉ e-mail cá nhân. Trước khi đưa website lên kho mã nguồn công khai, cần kiểm tra lại phạm vi chia sẻ các thông tin này.
-{{% /notice %}}
 
 ## Thông tin dự án
 

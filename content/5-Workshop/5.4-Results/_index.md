@@ -21,32 +21,5 @@ The final workshop video will demonstrate:
 
 ## Demo video
 
-{{% notice note %}}
-The workshop result video will be added here after the team completes recording and editing.
-{{% /notice %}}
-
-<!--
-OPTION 1 - USE A LOCAL MP4 FILE
-
-1. Copy the video to:
-   static/videos/5-Workshop/malscanai-demo.mp4
-
-2. Remove the notice block above.
-
-3. Uncomment the following HTML:
-
-<video controls preload="metadata" style="width: 100%; max-width: 1100px;">
-  <source src="/videos/5-Workshop/malscanai-demo.mp4" type="video/mp4">
-  Your browser does not support video playback.
-</video>
-
-
-OPTION 2 - EMBED A YOUTUBE VIDEO
-
-1. Upload the video to YouTube.
-2. Copy the VIDEO_ID from the URL.
-3. Remove the notice block above.
-4. Add the shortcode below and replace VIDEO_ID:
-
-{{< youtube VIDEO_ID >}}
--->
+<!-- Paste your Google Drive file ID into YOUR_GOOGLE_DRIVE_FILE_ID below. Make sure the video on Drive is set to "Anyone with the link can view" -->
+<iframe src="https://drive.google.com/file/d/1H0fn-DJBwUtcIOCNBVlZHzQekS9tQYFk/view" width="100%" height="480" allow="autoplay" style="border: none;"></iframe>

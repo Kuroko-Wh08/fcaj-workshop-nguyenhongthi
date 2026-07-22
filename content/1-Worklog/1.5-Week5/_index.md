@@ -16,11 +16,11 @@ pre: " <b> 1.5. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Learn how to create a database with Amazon DynamoDB. | 02/06/2026 | 02/06/2026 | — |
-| 2 | Create a cache with Amazon ElastiCache. | 04/06/2026 | 04/06/2026 | — |
-| 3 | Learn and practice content delivery with Amazon CloudFront. | 06/06/2026 | 06/06/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Learn how to create a database with Amazon DynamoDB. | 02/06/2026 | 02/06/2026 |
+| 2 | Create a cache with Amazon ElastiCache. | 04/06/2026 | 04/06/2026 |
+| 3 | Learn and practice content delivery with Amazon CloudFront. | 06/06/2026 | 06/06/2026 |
 
 ## Week 5 outcomes
 

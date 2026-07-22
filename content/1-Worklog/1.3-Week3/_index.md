@@ -17,11 +17,11 @@ pre: " <b> 1.3. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Study the fundamentals of Amazon RDS. | 18/05/2026 | 18/05/2026 | — |
-| 2 | Use Amazon Lightsail and deploy a container with Lightsail Containers. | 19/05/2026 | 19/05/2026 | — |
-| 3 | Implement scaling with EC2 Auto Scaling. | 23/05/2026 | 23/05/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Study the fundamentals of Amazon RDS. | 18/05/2026 | 18/05/2026 |
+| 2 | Use Amazon Lightsail and deploy a container with Lightsail Containers. | 19/05/2026 | 19/05/2026 |
+| 3 | Implement scaling with EC2 Auto Scaling. | 23/05/2026 | 23/05/2026 |
 
 ## Week 3 outcomes
 

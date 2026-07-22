@@ -15,11 +15,11 @@ pre: " <b> 1.6. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Study edge computing with CloudFront and Lambda@Edge. | 09/06/2026 | 09/06/2026 | — |
-| 2 | Practice creating and managing Windows Server on AWS. | 10/06/2026 | 10/06/2026 | — |
-| 3 | Attend a Meetup covering topics such as URL shortening services and DevOps environments. | 13/06/2026 | 13/06/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Study edge computing with CloudFront and Lambda@Edge. | 09/06/2026 | 09/06/2026 |
+| 2 | Practice creating and managing Windows Server on AWS. | 10/06/2026 | 10/06/2026 |
+| 3 | Attend a Meetup covering topics such as URL shortening services and DevOps environments. | 13/06/2026 | 13/06/2026 |
 
 ## Week 6 outcomes
 

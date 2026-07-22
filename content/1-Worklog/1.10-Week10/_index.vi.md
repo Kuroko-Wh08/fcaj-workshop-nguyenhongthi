@@ -15,10 +15,10 @@ pre: " <b> 1.10. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Viết blog về sử dụng IAM Role thay cho Access Key trên EC2. | 08/07/2026 | 08/07/2026 | — |
-| 2 | Tham dự Meetup gồm cuộc thi Cloud Architect, nội dung AWS Security Agent và chia sẻ về chứng chỉ AWS. | 11/07/2026 | 11/07/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Viết blog về sử dụng IAM Role thay cho Access Key trên EC2. | 08/07/2026 | 08/07/2026 |
+| 2 | Tham dự Meetup gồm cuộc thi Cloud Architect, nội dung AWS Security Agent và chia sẻ về chứng chỉ AWS. | 11/07/2026 | 11/07/2026 |
 
 ## Kết quả đạt được tuần 10
 

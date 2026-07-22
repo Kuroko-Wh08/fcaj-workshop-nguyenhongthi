@@ -16,11 +16,11 @@ pre: " <b> 1.7. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Learn how to use AWS Secrets Manager with RDS and Fargate. | 15/06/2026 | 15/06/2026 | — |
-| 2 | Learn and practice using Amazon ECS. | 17/06/2026 | 17/06/2026 | — |
-| 3 | Use a VPC endpoint for secure access to Amazon S3. | 21/06/2026 | 21/06/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Learn how to use AWS Secrets Manager with RDS and Fargate. | 15/06/2026 | 15/06/2026 |
+| 2 | Learn and practice using Amazon ECS. | 17/06/2026 | 17/06/2026 |
+| 3 | Use a VPC endpoint for secure access to Amazon S3. | 21/06/2026 | 21/06/2026 |
 
 ## Week 7 outcomes
 

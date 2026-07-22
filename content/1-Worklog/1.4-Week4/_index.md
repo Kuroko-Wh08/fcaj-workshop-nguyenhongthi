@@ -16,11 +16,11 @@ pre: " <b> 1.4. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Practice implementing monitoring with Amazon CloudWatch. | 25/05/2026 | 25/05/2026 | — |
-| 2 | Manage DNS with Amazon Route 53. | 29/05/2026 | 29/05/2026 | — |
-| 3 | Learn and practice command-line operations with the AWS CLI. | 31/05/2026 | 31/05/2026 | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Practice implementing monitoring with Amazon CloudWatch. | 25/05/2026 | 25/05/2026 |
+| 2 | Manage DNS with Amazon Route 53. | 29/05/2026 | 29/05/2026 |
+| 3 | Learn and practice command-line operations with the AWS CLI. | 31/05/2026 | 31/05/2026 |
 
 ## Week 4 outcomes
 

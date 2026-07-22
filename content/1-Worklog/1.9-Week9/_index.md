@@ -16,11 +16,11 @@ pre: " <b> 1.9. </b> "
 
 ## Tasks completed
 
-| No. | Task | Start date | Completion date | Reference material |
-|:---:|---|:---:|:---:|---|
-| 1 | Implement serverless automation with AWS Lambda. | 29/06/2026 | 29/06/2026 | — |
-| 2 | Practice building a frontend that calls Amazon API Gateway. | 02/07/2026 | 02/07/2026 | — |
-| 3 | Study and draw the MalScanAI project architecture. | Trong tuần | Trong tuần | — |
+| No. | Task | Start date | Completion date |
+|:---:|---|:---:|:---:|
+| 1 | Implement serverless automation with AWS Lambda. | 29/06/2026 | 29/06/2026 |
+| 2 | Practice building a frontend that calls Amazon API Gateway. | 02/07/2026 | 02/07/2026 |
+| 3 | Study and draw the MalScanAI project architecture. | Trong tuần | Trong tuần |
 
 ## Week 9 outcomes
 

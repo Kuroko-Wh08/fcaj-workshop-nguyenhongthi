@@ -16,11 +16,11 @@ pre: " <b> 1.8. </b> "
 
 ## Các công việc triển khai
 
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|:---:|---|:---:|:---:|---|
-| 1 | Học cách bảo vệ ứng dụng Web và API bằng AWS WAF. | 23/06/2026 | 23/06/2026 | — |
-| 2 | Tìm hiểu quản lý sự kiện và gửi cảnh báo bằng Amazon SQS và Amazon SNS. | 24/06/2026 | 24/06/2026 | — |
-| 3 | Tìm hiểu và thực hành quản lý định danh bằng Amazon Cognito. | 27/06/2026 | 27/06/2026 | — |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành |
+|:---:|---|:---:|:---:|
+| 1 | Học cách bảo vệ ứng dụng Web và API bằng AWS WAF. | 23/06/2026 | 23/06/2026 |
+| 2 | Tìm hiểu quản lý sự kiện và gửi cảnh báo bằng Amazon SQS và Amazon SNS. | 24/06/2026 | 24/06/2026 |
+| 3 | Tìm hiểu và thực hành quản lý định danh bằng Amazon Cognito. | 27/06/2026 | 27/06/2026 |
 
 ## Kết quả đạt được tuần 8
 
