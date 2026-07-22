@@ -20,4 +20,4 @@ Video demo cuối workshop sẽ tập trung vào các nội dung sau:
 ## Video demo
 
 
-<iframe src="https://drive.google.com/file/d/1H0fn-DJBwUtcIOCNBVlZHzQekS9tQYFk/view" width="100%" height="480" allow="autoplay" style="border: none;"></iframe>
+<iframe src="https://drive.google.com/file/d/1AKdMJN-z_w3wlmlskxMsq_m7E3x4hzEj/view?usp=sharing" width="100%" height="480" allow="autoplay" style="border: none;"></iframe>
