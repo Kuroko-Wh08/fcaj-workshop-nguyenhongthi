@@ -1,39 +1,38 @@
 ---
-title: "Self-Assessment"
-date: 2024-01-01
+title: "Personal Self-evaluation"
+date: 2026-07-21
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Personal Self-evaluation
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+During my internship at AWS and participation in the FCAJ Bootcamp 2026, I had opportunities to study cloud computing, AWS infrastructure, and apply what I had learned to a project workshop. Based on my learning and working experience, I evaluate myself as follows.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+## 1. Competency assessment
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+| Criterion | Rating | Assessment |
+|---|:---:|---|
+| Knowledge | Good | I understood the foundational concepts and applied them to exercises and practical projects during the Bootcamp. I still need to study advanced and specialized topics in greater depth. |
+| Learning ability | Good | I can learn new technologies and tools. When I encounter difficult concepts, I actively search for additional materials, although my learning pace can sometimes be slow. |
+| Initiative | Very good | I proactively accept tasks, investigate solutions, and address issues that arise during the work. |
+| Discipline | Average | I need to improve time planning to avoid deadline pressure and manage smaller tasks more consistently. |
+| Communication | Good | I can communicate ideas, listen to feedback, and discuss openly with team members. During tense discussions, I need to express myself more tactfully and concisely. |
+| Teamwork | Very good | I integrate well with the team, actively support teammates, and coordinate work to maintain overall progress. |
+| Problem solving | Good | I can analyze errors and propose workable solutions. However, I sometimes spend too much time exploring secondary approaches before identifying the optimal solution. |
+| Project contribution | Good | I completed assigned tasks and maintained output quality, contributing to the team's overall progress. |
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+## 2. Areas for improvement
 
-### Needs Improvement
+### Improve discipline and time management
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+I need to establish a more structured working process and divide goals into daily and hourly tasks so that progress can be monitored closely and work is not delayed until the deadline.
+
+### Deepen technical knowledge
+
+I need to spend more time on advanced topics introduced during the Bootcamp and complete more simulated projects to improve my current competency level.
+
+### Optimize the problem-solving process
+
+I need to strengthen critical thinking and incident-scoping skills so that problems can be handled more quickly and logically without spending too much time on unnecessary approaches.

@@ -1,115 +1,173 @@
 ---
-title: "Proposal"
-date: 2024-01-01
+title: "Project Proposal"
+date: 2026-07-21
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+# MalScan AI — AI-Integrated Community Malware Detection Platform
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+---
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+## 1. Executive Summary
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+MalScan AI is a community-driven malware detection platform operating on a miniature VirusTotal model. The system allows users to scan executable PE files (exe/dll), Office documents (Word/Excel/PDF/HTML), and suspicious URLs to detect malware using Machine Learning models (XGBoost, CNN). Concurrently, the system integrates a complete Model Lifecycle Management (MLOps) pipeline, allowing Admins to retrain and deploy new models seamlessly without system downtime. The entire platform is deployed on AWS ECS Fargate using a containerized architecture, featuring multi-layer protection (Route 53 + CloudFront + WAF + ALB) and persistent storage via Amazon EFS.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+---
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+## 2. Problem Statement
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+*Current Issues*
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+Existing malware detection tools often require complex installations or rely entirely on third-party cloud services like VirusTotal (which have rate limits and lack model customization capabilities). Furthermore, internal SOC teams lack integrated tools to simultaneously analyze malware and manage the AI model lifecycle over time.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+*Our Solution*
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+MalScan AI provides a single unified gateway via a Streamlit web app interface, supporting:
+- Scanning PE files using 2568 static features extracted directly from PE files based on the EMBER 2024 dataset (XGBoost + SHAP explanation).
+- Scanning Office/PDF/HTML documents with a model trained on the CIC-Trap4Phish 2025 dataset.
+- Scanning URLs using a 3-branch CNN model combined with OSINT (IP, WHOIS, SSL, Screenshot).
+- VirusTotal-style Hash Cache mechanism: previously scanned files/URLs return instant results without re-running AI inference.
+- MLOps Dashboard: data collection → data cleaning → training → staging test → production deployment.
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+---
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+## 3. Solution Architecture
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+The system is deployed using a containerized architecture on AWS ECS Fargate, consisting of two containers running in parallel within a single Fargate Task:
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+- **Container 1 (Streamlit — Port 8501)**: User Interface, PE Scanner, Document Scanner, URL Scanner, Model Management.
+- **Container 2 (Flask API — Port 5000)**: Exclusively handles the TensorFlow URL model (isolated to prevent numpy library conflicts).
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+![MalScanAI architecture](/images/2-Proposal/malscanai-proposal-architecture.png)
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+*Main Data Flow:*
 
-Total: $0.7/month, $8.40/12 months
+1. **(1) HTTPS Request:** Users access the system via a custom domain, resolved by Amazon Route 53, which routes traffic to CloudFront (integrated with AWS WAF to filter DDoS, SQL Injection, and XSS at the Edge).
+2. **(2) Route valid traffic:** CloudFront routes valid traffic through the Internet Gateway to enter the VPC.
+3. **(3) Forward port 443→8501:** The Internet Gateway forwards traffic to the Application Load Balancer in the Public Subnet.
+4. **(4) Streamlit App (port 8501):** The ALB balances and forwards requests to the AWS Fargate Task located in the Private Subnet.
+5. **(5) Read/Write models & SQLite:** The Fargate Task reads/writes ML models and the database on Amazon EFS.
+6. **(6) Outbound traffic:** Outbound traffic from the Fargate Task is routed to the NAT Gateway.
+7. **(7) Pull Docker image:** The system pulls images via the ECR Endpoint (Private link).
+8. **(8) External API calls:** The NAT Gateway makes calls to External APIs (VirusTotal, MalwareBazaar, IP Geolocation, microlink.io).
+9. **(9) Logs & Metrics:** The Fargate Task sends logs and metrics via the CloudWatch Endpoint.
+10. **(10) Grant ECS permissions:** AWS IAM grants execution permissions (ECS Task Role) to the Fargate Task.
+11. **(11) Fetch API Keys:** The Fargate Task retrieves security keys securely through AWS Secrets Manager.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+*AWS Services Utilized:*
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+| Service | Role |
+|---|---|
+| Amazon Route 53 | Domain Name System (DNS) resolution and reliable user traffic routing |
+| Amazon ECS Fargate | Runs 2 containers without server management |
+| Application Load Balancer | Distributes incoming traffic into the Private Subnet |
+| AWS WAF + CloudFront | Edge protection, content delivery, and Layer 7 DDoS mitigation |
+| Amazon ECR | Stores Docker Images |
+| Amazon EFS | Persistent storage: ML models + SQLite database |
+| Amazon VPC | Network isolation: Public/Private Subnets, NAT Gateway, VPC Endpoints |
+| Amazon CloudWatch | Collects logs and metrics |
+| AWS Secrets Manager | Securely manages API Keys and credentials |
+| AWS IAM | Controls ECS Task Role permissions |
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+---
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+## 4. Technical Implementation
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+*Implementation Phases:*
+
+**Month 1 — Model Research & Development:**
+- Train PE model (XGBoost, 2568 static features from the EMBER dataset, supporting Win32/Win64).
+- Train Document model (Word/Excel/PDF/HTML from CIC-Trap4Phish 2025).
+- Integrate URL Scanner with 3-branch CNN + OSINT engine (Achieved 97% accuracy on a 500,000 sample dataset).
+- Build Model Lifecycle Management (data collection → training → staging → production).
+- Package everything into Docker Images (2 containers).
+
+**Month 2 — AWS Infrastructure Deployment:**
+- Setup VPC (Public/Private Subnets, NAT Gateway, VPC Endpoints).
+- Push Docker Images to Amazon ECR.
+- Configure ECS Task Definition with EFS volume mounts.
+- Setup ALB and Target Groups.
+- Configure IAM Task Role based on the Least Privilege principle.
+
+**Month 3 — Security, Testing & Documentation:**
+- Configure WAF Rules and CloudFront distribution.
+- Setup AWS Secrets Manager to secure API Keys.
+- Perform end-to-end system testing (logs/metrics on CloudWatch).
+- Build Hash Cache database (SQLAlchemy + SQLite on EFS).
+- Implement community registration/login system.
+- Write bilingual Workshop report and clean up resources.
+
+*Technical Requirements:*
+- **ML & App**: Python 3.12, XGBoost 3.3, TensorFlow 2.20, Streamlit, Flask, SHAP, scikit-learn.
+- **Cloud**: AWS VPC, ECS Fargate, ALB, WAF, CloudFront, EFS, ECR, CloudWatch, Secrets Manager, IAM.
+- **DevOps**: Docker, docker-compose (2 services), SQLAlchemy + SQLite.
+
+---
+
+## 5. Roadmap & Milestones
+
+| Milestone | Timeline | Outcome |
+|---|---|---|
+| PE Model Completed | Week 2 | Accuracy >97.5%, SHAP explanation |
+| Document Model Completed | Week 3 | 4 file types, F1 >93% |
+| URL Scanner Integrated | Week 5 | 97% accuracy on 500k samples |
+| Docker Build Successful | Week 6 | 2 stable running containers |
+| MLOps Dashboard | Week 7 | Complete Train/Stage/Deploy flow |
+| AWS Infrastructure | Week 9 | VPC, ECS, EFS, ALB, Secrets Manager live |
+| Security Layer | Week 10 | WAF + CloudFront active |
+| Hash Cache + Auth | Week 11 | Community features live |
+| Workshop Report | Week 12 | Bilingual, complete screenshots |
+
+---
+
+## 6. Budget Estimate
+
+*Estimated infrastructure costs via AWS Pricing Calculator (Region: Asia Pacific - Singapore):*
+
+| Service | Cost/Month |
+|---|---|
+| AWS Fargate (Linux, x86, 8GB RAM, 20GB Storage, 1 task/day) | $35.38 |
+| Application Load Balancer (1 ALB) | $18.63 |
+| Amazon VPC (1 NAT Gateway, 2 VPC Endpoints) | $85.67 |
+| Amazon EFS (10GB Storage) | $4.14 |
+| AWS WAF ($8.02) + Amazon CloudFront ($1.36) | $9.38 |
+| AWS Secrets Manager (Managing 3 secrets) | $0.90 |
+| Amazon Route 53 (1 Hosted Zone) | $0.50 |
+| **Total Estimated Cost** | **$154.60/month** |
+
+*Cost Optimization Strategy:*
+- Established VPC Endpoints architecture for ECR and CloudWatch to minimize traffic routed through the NAT Gateway.
+- Total projected cost for 12 months of operation is $1,855.20 (Upfront cost: $0.00).
+- Utilized AWS Budget Alerts for early warnings in case of unexpected cost spikes.
+
+---
+
+## 7. Risk Assessment
+
+| Risk | Impact | Probability | Mitigation Strategy |
+|---|---|---|---|
+| Evasion Attack on PE model | High | Medium | V2 Model against evasion + VirusTotal cross-referencing |
+| numpy/tensorflow library conflict | High | Occurred | Separated into 2 independent containers (Resolved) |
+| Budget overrun (NAT Gateway) | Medium | High | VPC Endpoints + AWS Budget Alerts |
+| False Positive on URL Scanner | Medium | Medium | Combine AI score + OSINT for a comprehensive result |
+| API Keys Leakage | Critical | Low | Transition to centralized management using AWS Secrets Manager |
+| SQLite lock on EFS | Low | Low | `connect_args timeout=30` + single Fargate task |
+
+---
+
+## 8. Expected Outcomes
+
+*Technical Outcomes:*
+- **PE Scanner:** Accuracy >97.5% based on static features extracted from PE files, providing clear SHAP explanations for each prediction to ensure AI transparency.
+- **Document Scanner:** F1 Score >93% across 4 document formats (Word/Excel/PDF/HTML).
+- **URL Scanner:** Achieved 97% accuracy on a 500,000 sample dataset by combining a 3-branch CNN model and multi-source OSINT.
+- **Hash Cache:** Significantly reduced response time for previously analyzed files/URLs.
+- **MLOps:** Closed the model lifecycle loop from data collection to production deployment.
+
+*Long-term Values:*
+- Community system: More users → fuller cache → lighter server load.
+- Scalable architecture: Adding new scanners only requires adding corresponding containers/modules.
+- MLOps Platform: Admins can continuously improve models based on real-world feedback.
+- Future roadmap: Integrate Amazon Cognito, DynamoDB, and S3 for Enterprise-scale operations.

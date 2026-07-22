@@ -1,40 +1,38 @@
 ---
-title: "Tự đánh giá"
-date: 2024-01-01
+title: "Tự đánh giá cá nhân"
+date: 2026-07-21
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Tự đánh giá cá nhân
 
-Trong suốt thời gian thực tập tại **[Tên công ty/tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia **[mô tả ngắn gọn dự án hoặc công việc chính]**, qua đó cải thiện kỹ năng **[liệt kê kỹ năng: lập trình, phân tích, viết báo cáo, giao tiếp…]**.  
+Trong suốt quá trình thực tập tại AWS và tham gia FCAJ Bootcamp 2026, tôi có cơ hội tìm hiểu môi trường Cloud, hạ tầng AWS và áp dụng kiến thức đã học để xây dựng Project Workshop. Dựa trên quá trình học tập và làm việc, tôi tự đánh giá bản thân như sau.
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+## 1. Đánh giá theo các tiêu chí năng lực
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+| Tiêu chí | Mức tự đánh giá | Nhận xét |
+|---|:---:|---|
+| Kiến thức | Khá | Tôi đã nắm được các kiến thức nền tảng và áp dụng vào bài tập, dự án thực tế trong Bootcamp. Tôi vẫn cần tiếp tục đào sâu các phần kiến thức nâng cao và chuyên biệt. |
+| Khả năng học hỏi | Khá | Tôi có khả năng tiếp thu công nghệ và công cụ mới. Khi gặp khái niệm khó, tôi chủ động tìm tài liệu để hiểu vấn đề, dù đôi khi tốc độ tìm hiểu còn chậm. |
+| Tính chủ động | Tốt | Tôi chủ động nhận nhiệm vụ, tìm hiểu giải pháp và xử lý các vấn đề phát sinh trong quá trình làm việc. |
+| Kỷ luật | Trung bình | Tôi cần cải thiện việc sắp xếp thời gian để tránh áp lực sát thời hạn và quản lý tốt hơn các đầu việc nhỏ. |
+| Giao tiếp | Khá | Tôi có khả năng diễn đạt ý tưởng, lắng nghe phản hồi và trao đổi cởi mở với các thành viên. Trong những cuộc thảo luận căng thẳng, tôi cần truyền đạt khéo léo và cô đọng hơn. |
+| Teamwork | Tốt | Tôi hòa nhập tốt với nhóm, chủ động hỗ trợ đồng đội và phối hợp để bảo đảm tiến độ chung. |
+| Giải quyết vấn đề | Khá | Tôi có thể phân tích lỗi và đề xuất giải pháp khả thi. Tuy nhiên, đôi khi tôi mất thời gian vào các hướng xử lý phụ trước khi tìm được phương án tối ưu. |
+| Đóng góp cho dự án | Khá | Tôi hoàn thành các nhiệm vụ được giao và bảo đảm chất lượng đầu ra, qua đó đóng góp vào tiến độ chung của nhóm. |
 
+## 2. Điểm cần cải thiện
 
-| STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ☐   | ✅   | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ☐   | ☐   | ✅          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ☐   | ✅   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+### Nâng cao tính kỷ luật và quản lý thời gian
 
-### Cần cải thiện
+Tôi cần xây dựng quy trình làm việc nghiêm túc hơn, chia nhỏ mục tiêu theo ngày và giờ để kiểm soát tiến độ chặt chẽ, hạn chế tình trạng dồn công việc vào sát thời hạn.
 
-* Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
-* Cải thiện trong cách tư duy giải quyết vấn đề
-* Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+### Đào sâu chuyên môn
+
+Tôi cần dành thêm thời gian cho các nội dung nâng cao được giới thiệu trong Bootcamp và thực hành nhiều dự án mô phỏng hơn để cải thiện mức năng lực hiện tại.
+
+### Tối ưu quy trình giải quyết vấn đề
+
+Tôi cần rèn luyện tư duy phản biện và khả năng khoanh vùng sự cố để xử lý vấn đề nhanh, logic và hạn chế đi theo những hướng không cần thiết.

@@ -1,126 +1,87 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Meetup on June 13, 2026"
+date: 2026-06-13
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Meetup Reflection – June 13, 2026
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+- **Event:** Annual Meetup
+- **Time:** 09:00, June 13, 2026
+- **Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
+- **Role:** Attendee
 
-### Event Objectives
+## 1. A Scalable URL Shortening Service on AWS
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+**Speakers**
 
-### Speakers
+- Lưu Tuấn Kiệt
+- Nguyễn Minh Thọ
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+**Main content**
 
-### Key Highlights
+- Configured and deployed Amazon EC2 in an isolated Amazon VPC for performance testing.
+- Built a NoSQL database with Amazon DynamoDB and selected an appropriate partition key to optimize URL resolution.
+- Implemented CRUD operations for URL data.
+- Integrated Amazon Cognito for authentication and used JWT tokens to secure user sessions.
 
-#### Identifying the drawbacks of legacy application architecture
+**Value gained**
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- Improved my understanding of VPC configuration, identity management with Cognito, and DynamoDB design for high-load applications.
+- Recognized the importance of storage and authentication components in building a stable cloud-based URL shortening service.
 
-#### Transitioning to modern application architecture – Microservices
+## 2. Cloud Source Code Management and Development Synchronization with Git Flow
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+**Speakers**
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- Nguyễn Trung Hiếu
+- Trần Minh Trí – System Technology Coordination Team Member
 
-#### Domain-Driven Design (DDD)
+**Main content**
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- Established centralized source code management using Git and GitHub.
+- Practiced feature branches, commits, conflict resolution, code review, and pull requests.
+- Standardized technical documentation and published it through GitHub Pages.
 
-#### Event-Driven Architecture
+**Value gained**
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- Improved source code management, team communication, and conflict-resolution skills.
+- Understood how Git Flow reduces accidental code overwrites and helps mentors monitor progress transparently.
 
-#### Compute Evolution
+## 3. Applying Deep Learning to Classify and Automatically Block Attacks in Cloud Systems
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+**Authors**
 
-#### Amazon Q Developer
+- Nguyễn Lưu Trọng Phước
+- Trần Khả Hào
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+**Main content**
 
-### Key Takeaways
+- Studied AWS Lambda and event-driven architecture.
+- Connected Amazon GuardDuty, Amazon EventBridge, and Lambda to record incidents and send alerts through Amazon SNS.
+- Integrated CNN and Autoencoder models to analyze the CSE-CIC-IDS2018 dataset and detect anomalous network traffic.
 
-#### Design Mindset
+**Value gained**
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- Expanded my knowledge of combining AI/ML with cloud security.
+- Learned how an automated, low-latency incident response flow can be designed on AWS.
 
-#### Technical Architecture
+## 4. System Architecture Design and ReactJS Integration with AWS Serverless APIs
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+**Speakers**
 
-#### Modernization Strategy
+- Nguyễn Thành Đạt
+- Nguyễn Quốc
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+**Main content**
 
-### Applying to Work
+- Created a solution architecture diagram in Draw.io based on the AWS Well-Architected Framework.
+- Configured Amazon API Gateway routes, methods, and backend integrations.
+- Developed ReactJS interfaces for a dashboard, incident details, and a timeline.
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+**Value gained**
 
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+- Improved my understanding of decoupled architecture, RESTful APIs, and cloud performance and cost optimization.
+- Learned the process of connecting a frontend application to a serverless backend and preparing API documentation for handover.

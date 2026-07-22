@@ -1,108 +1,173 @@
 ---
 title: "Bản đề xuất"
-date: 2024-01-01
+date: 2026-07-21
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# MalScan AI — Nền Tảng Phát Hiện Mã Độc Cộng Đồng Tích Hợp AI
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+---
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+## 1. Tóm tắt điều hành
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+MalScan AI là một nền tảng phát hiện mã độc hướng cộng đồng, hoạt động theo mô hình tương tự VirusTotal thu nhỏ. Hệ thống cho phép người dùng quét file thực thi PE (exe/dll), tài liệu Office (Word/Excel/PDF/HTML) và URL đáng ngờ để phát hiện mã độc bằng các mô hình Machine Learning (XGBoost, CNN). Đồng thời, hệ thống tích hợp vòng đời quản lý mô hình (MLOps) hoàn chỉnh cho phép Admin tự huấn luyện lại và triển khai mô hình mới mà không cần dừng hệ thống. Toàn bộ được triển khai trên AWS ECS Fargate với kiến trúc Container hóa, bảo vệ nhiều lớp (Route 53 + CloudFront + WAF + ALB) và lưu trữ bền vững qua Amazon EFS.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+---
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+## 2. Tuyên bố vấn đề
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+*Vấn đề hiện tại*
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+Các công cụ phát hiện mã độc hiện tại thường yêu cầu cài đặt phức tạp hoặc phụ thuộc hoàn toàn vào dịch vụ đám mây bên thứ ba như VirusTotal (giới hạn rate, không có khả năng tùy chỉnh mô hình). Bên cạnh đó, các đội SOC nội bộ thiếu công cụ tích hợp để vừa phân tích mã độc vừa quản lý vòng đời mô hình AI theo thời gian.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+*Giải pháp*
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+MalScan AI cung cấp một cổng giao tiếp duy nhất qua giao diện Streamlit web app, hỗ trợ:
+- Quét PE file thông qua 2568 đặc trưng tĩnh (static features) được trích xuất trực tiếp từ file PE dựa trên tập dữ liệu EMBER 2024 (XGBoost + SHAP explanation).
+- Quét tài liệu Office/PDF/HTML với mô hình được huấn luyện từ CIC-Trap4Phish 2025.
+- Quét URL với mô hình CNN 3-nhánh kết hợp OSINT (IP, WHOIS, SSL, Screenshot).
+- Cơ chế Hash Cache kiểu VirusTotal: file/URL đã quét trả kết quả tức thì không chạy lại AI.
+- MLOps Dashboard: thu thập data → làm sạch → huấn luyện → staging test → production deploy.
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+---
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+## 3. Kiến trúc giải pháp
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+Hệ thống triển khai theo kiến trúc Container hóa trên AWS ECS Fargate, bao gồm hai container chạy song song trong cùng một Fargate Task:
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- **Container 1 (Streamlit — Port 8501)**: Giao diện người dùng, PE Scanner, Document Scanner, URL Scanner, Model Management.
+- **Container 2 (Flask API — Port 5000)**: Xử lý riêng TensorFlow URL model (tách biệt để tránh xung đột thư viện numpy).
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+![Kiến trúc MalScanAI](/images/2-Proposal/malscanai-proposal-architecture.png)
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+*Luồng dữ liệu chính:*
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+1. **(1) HTTPS Request:** Người dùng truy cập hệ thống qua tên miền tùy chỉnh, được phân giải bởi Amazon Route 53 và định tuyến tới CloudFront (tích hợp AWS WAF lọc DDoS, SQL Injection, XSS tại Edge).
+2. **(2) Route valid traffic:** CloudFront định tuyến các traffic hợp lệ đi qua Internet Gateway để vào VPC.
+3. **(3) Forward port 443→8501:** Internet Gateway chuyển tiếp traffic đến Application Load Balancer tại Public Subnet.
+4. **(4) Streamlit App (port 8501):** ALB điều phối request vào AWS Fargate Task nằm ở Private Subnet.
+5. **(5) Read/Write models & SQLite:** Fargate Task đọc/ghi mô hình ML và cơ sở dữ liệu trên Amazon EFS.
+6. **(6) Outbound traffic:** Traffic gọi ra ngoài của Fargate Task được đẩy tới NAT Gateway.
+7. **(7) Pull Docker image:** Hệ thống kéo image thông qua ECR Endpoint (Private link).
+8. **(8) External API calls:** NAT Gateway gọi ra các External APIs (VirusTotal, MalwareBazaar, IP Geolocation, microlink.io).
+9. **(9) Logs & Metrics:** Fargate Task gửi log và metric qua CloudWatch Endpoint.
+10. **(10) Grant ECS permissions:** AWS IAM cấp quyền thực thi (ECS Task Role) cho Fargate Task.
+11. **(11) Fetch API Keys:** Fargate Task truy xuất các khóa bảo mật thông qua AWS Secrets Manager.
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+*Dịch vụ AWS sử dụng:*
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+| Dịch vụ | Vai trò |
+|---|---|
+| Amazon Route 53 | Phân giải tên miền (DNS) và định tuyến người dùng một cách tin cậy |
+| Amazon ECS Fargate | Chạy 2 container không cần quản lý server |
+| Application Load Balancer | Điều phối traffic vào Private Subnet |
+| AWS WAF + CloudFront | Bảo vệ biên, phân phối nội dung và chống DDoS Layer 7 |
+| Amazon ECR | Lưu trữ Docker Image |
+| Amazon EFS | Lưu trữ bền vững: ML models + SQLite |
+| Amazon VPC | Cô lập mạng: Public/Private Subnet, NAT Gateway, VPC Endpoints |
+| Amazon CloudWatch | Thu thập log và metrics |
+| AWS Secrets Manager | Quản lý an toàn các API Keys và thông tin xác thực |
+| AWS IAM | Kiểm soát quyền ECS Task Role |
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+---
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+## 4. Triển khai kỹ thuật
+
+*Các giai đoạn triển khai:*
+
+**Tháng 1 — Nghiên cứu & Phát triển Mô hình:**
+- Huấn luyện PE model (XGBoost, 2568 static features từ tập EMBER, hỗ trợ Win32/Win64).
+- Huấn luyện Document model (Word/Excel/PDF/HTML từ CIC-Trap4Phish 2025).
+- Tích hợp URL Scanner với CNN 3-nhánh + OSINT engine (Đạt độ chính xác 97% trên tập dữ liệu 500.000 mẫu).
+- Xây dựng Model Lifecycle Management (data collection → training → staging → production).
+- Đóng gói toàn bộ thành Docker Image (2 container).
+
+**Tháng 2 — Triển khai Hạ tầng AWS:**
+- Thiết lập VPC (Public/Private Subnet, NAT Gateway, VPC Endpoints).
+- Đẩy Docker Image lên Amazon ECR.
+- Cấu hình ECS Task Definition với EFS volume mount.
+- Thiết lập ALB và Target Group.
+- Cấu hình IAM Task Role theo nguyên tắc Least Privilege.
+
+**Tháng 3 — Bảo mật, Kiểm thử & Tài liệu:**
+- Cấu hình WAF Rules và CloudFront distribution.
+- Thiết lập AWS Secrets Manager để bảo mật API Keys.
+- Kiểm thử hệ thống end-to-end (log/metric trên CloudWatch).
+- Xây dựng Hash Cache database (SQLAlchemy + SQLite trên EFS).
+- Triển khai hệ thống đăng ký/đăng nhập cộng đồng.
+- Viết Workshop report song ngữ và dọn dẹp tài nguyên.
+
+*Yêu cầu kỹ thuật:*
+- **ML & App**: Python 3.12, XGBoost 3.3, TensorFlow 2.20, Streamlit, Flask, SHAP, scikit-learn.
+- **Cloud**: AWS VPC, ECS Fargate, ALB, WAF, CloudFront, EFS, ECR, CloudWatch, Secrets Manager, IAM.
+- **DevOps**: Docker, docker-compose (2 service), SQLAlchemy + SQLite.
+
+---
+
+## 5. Lộ trình & Mốc triển khai
+
+| Mốc | Thời gian | Kết quả |
+|---|---|---|
+| PE Model hoàn thiện | Tuần 2 | Accuracy >97.5%, SHAP explanation |
+| Document Model hoàn thiện | Tuần 3 | 4 loại file, F1 >93% |
+| URL Scanner tích hợp | Tuần 5 | Độ chính xác 97% trên 500k mẫu |
+| Docker build thành công | Tuần 6 | 2 container chạy ổn định |
+| MLOps Dashboard | Tuần 7 | Train/Stage/Deploy hoàn chỉnh |
+| AWS Infrastructure | Tuần 9 | VPC, ECS, EFS, ALB, Secrets Manager live |
+| Security Layer | Tuần 10 | WAF + CloudFront active |
+| Hash Cache + Auth | Tuần 11 | Community features live |
+| Workshop Report | Tuần 12 | Song ngữ, đầy đủ screenshot |
+
+---
+
+## 6. Ước tính ngân sách
+
+*Chi phí hạ tầng ước tính theo AWS Pricing Calculator (Khu vực: Asia Pacific - Singapore):*
+
+| Dịch vụ | Chi phí/tháng |
+|---|---|
+| AWS Fargate (Linux, x86, 8GB RAM, 20GB Storage, 1 task/day) | $35.38 |
+| Application Load Balancer (1 ALB) | $18.63 |
+| Amazon VPC (1 NAT Gateway, 2 VPC Endpoints) | $85.67 |
+| Amazon EFS (10GB Storage) | $4.14 |
+| AWS WAF ($8.02) + Amazon CloudFront ($1.36) | $9.38 |
+| AWS Secrets Manager (Quản lý 3 secrets) | $0.90 |
+| Amazon Route 53 (1 Hosted Zone) | $0.50 |
+| **Tổng chi phí ước tính** | **$154.60/tháng** |
+
+*Chiến lược tối ưu chi phí:*
+- Thiết lập kiến trúc VPC Endpoints cho ECR và CloudWatch để giảm tải tối đa lưu lượng phải đi qua NAT Gateway.
+- Tổng chi phí dự kiến cho 12 tháng hoạt động là $1,855.20 (không có chi phí trả trước - Upfront cost: $0.00).
+- Sử dụng AWS Budget Alert để cảnh báo sớm nếu chi phí phát sinh bất thường.
+
+---
+
+## 7. Đánh giá rủi ro
+
+| Rủi ro | Mức độ ảnh hưởng | Xác suất | Chiến lược giảm thiểu |
+|---|---|---|---|
+| Evasion Attack vào PE model | Cao | Trung bình | Mô hình V2 chống evasion + đối chiếu VirusTotal |
+| Xung đột thư viện numpy/tensorflow | Cao | Đã xảy ra | Tách 2 container độc lập (đã giải quyết) |
+| Vượt ngân sách (NAT Gateway) | Trung bình | Cao | VPC Endpoints + AWS Budget Alert |
+| False Positive URL Scanner | Trung bình | Trung bình | Kết hợp AI score + OSINT để đưa ra kết quả tổng hợp |
+| Rò rỉ API Keys | Nghiêm trọng | Thấp | Chuyển sang quản lý tập trung bằng AWS Secrets Manager |
+| SQLite lock trên EFS | Thấp | Thấp | connect_args timeout=30 + single Fargate task |
+
+---
+
+## 8. Kết quả kỳ vọng
+
+*Kết quả kỹ thuật:*
+- **PE Scanner:** Độ chính xác >97.5% dựa trên các đặc trưng tĩnh trích xuất từ file PE, cung cấp SHAP explanation rõ ràng cho từng dự đoán nhằm minh bạch hóa quyết định của AI.
+- **Document Scanner:** F1 Score >93% trên 4 loại định dạng tài liệu (Word/Excel/PDF/HTML).
+- **URL Scanner:** Đạt độ chính xác 97% trên tập dữ liệu 500.000 mẫu thông qua việc kết hợp mô hình CNN 3-nhánh và OSINT đa nguồn.
+- **Hash Cache:** Giảm thiểu đáng kể thời gian phản hồi cho các file/URL đã được hệ thống phân tích trước đó.
+- **MLOps:** Khép kín vòng đời quản lý mô hình từ khâu thu thập dữ liệu (data collection) đến triển khai thực tế (production deploy).
+
+*Giá trị dài hạn:*
+- Hệ thống cộng đồng: Càng nhiều người dùng → cache càng đầy → server càng nhẹ.
+- Kiến trúc có thể mở rộng: Thêm scanner mới chỉ cần thêm container/module tương ứng.
+- Nền tảng MLOps: Admin có thể cải thiện model liên tục từ feedback thực tế.
+- Hướng phát triển tương lai: Tích hợp Amazon Cognito, DynamoDB, S3 cho quy mô Enterprise.

@@ -1,39 +1,30 @@
 ---
-title: "Worklog"
-date: 2024-01-01
+title: "Weekly Worklog"
+date: 2026-05-05
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
+# Twelve-week Worklog
+
+This section records the AWS learning activities, practical exercises, and MalScanAI deployment work completed during the AWS FCAJ Bootcamp 2026.
+
+{{% notice note %}}
+Obvious date-entry errors in the source report were normalized according to the weekly sequence. The objectives, tasks, technical content, and outcomes remain based on the supplied report.
 {{% /notice %}}
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
-
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
-
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
-
-**Week 2:** [Doing task A...](1.2-week2/)
-
-**Week 3:** [Doing task B...](1.3-week3/)
-
-**Week 4:** [Doing task C...](1.4-week4/)
-
-**Week 5:** [Doing task D...](1.5-week5/)
-
-**Week 6:** [Doing task E...](1.6-week6/)
-
-**Week 7:** [Doing task G...](1.7-week7/)
-
-**Week 8:** [Doing task H...](1.8-week8/)
-
-**Week 9:** [Doing task I...](1.9-week9/)
-
-**Week 10:** [Doing task L...](1.10-week10/)
-
-**Week 11:** [Doing task M...](1.11-week11/)
-
-**Week 12:** [Doing task N...](1.12-week12/)
+| Week | Main focus |
+|:---:|---|
+| [Week 1](1.1-Week1/) | Program introduction, AWS account creation, and AWS Budgets |
+| [Week 2](1.2-Week2/) | IAM, VPC, EC2, and S3 Static Website Hosting |
+| [Week 3](1.3-Week3/) | RDS, Lightsail, containers, and EC2 Auto Scaling |
+| [Week 4](1.4-Week4/) | CloudWatch, Route 53, and the AWS CLI |
+| [Week 5](1.5-Week5/) | DynamoDB, ElastiCache, and CloudFront |
+| [Week 6](1.6-Week6/) | Lambda@Edge, Windows Server, and Meetup |
+| [Week 7](1.7-Week7/) | Secrets Manager, ECS Fargate, and VPC endpoints |
+| [Week 8](1.8-Week8/) | AWS WAF, SQS, SNS, and Cognito |
+| [Week 9](1.9-Week9/) | Lambda, API Gateway, and MalScanAI architecture |
+| [Week 10](1.10-Week10/) | IAM role blog post and AWS Meetup |
+| [Week 11](1.11-Week11/) | MalScanAI system deployment |
+| [Week 12](1.12-Week12/) | Workshop and report completion |

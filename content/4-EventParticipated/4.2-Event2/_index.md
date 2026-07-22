@@ -1,126 +1,65 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Meetup on July 11, 2026"
+date: 2026-07-11
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Meetup Reflection – July 11, 2026
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+- **Event:** Annual Meetup
+- **Time:** 09:00, July 11, 2026
+- **Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
+- **Role:** Attendee
 
-### Event Objectives
+## 1. Cloud Architect Competition Final
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Watched the final round between Team KLK and Team Ngũ Đại Hiệp.
+- The teams answered ten questions about AWS services and practical architecture scenarios.
+- Team KLK won the final.
+- The competition helped me understand how AWS services can be selected for different real-world problems.
 
-### Speakers
+## 2. Web Application Security with AWS Security Agent
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+**Speaker:** Nguyễn Duy Thịnh
 
-### Key Highlights
+**Main content**
 
-#### Identifying the drawbacks of legacy application architecture
+- Analyzed common security risks affecting web applications.
+- Studied how AWS Security Agent can be deployed to protect a system.
+- Practiced defining security rules and monitoring traffic to detect and block attacks.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+**Value gained**
 
-#### Transitioning to modern application architecture – Microservices
+- Improved my understanding of AWS security tools.
+- Strengthened my risk-analysis mindset and my ability to design a security layer for cloud-based web applications.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+## 3. Preparing for the AWS Certified Cloud Practitioner Certification
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+**Speaker:** Ngô Lê Tấn Huy
 
-#### Domain-Driven Design (DDD)
+**Main content**
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- Reviewed the exam structure and its main domains: Cloud Concepts, Security, Technology, Billing and Pricing.
+- Learned study strategies, common question types, and time-management techniques.
 
-#### Event-Driven Architecture
+**Value gained**
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- Consolidated my foundational AWS knowledge.
+- Established a clearer study roadmap for the AWS Certified Cloud Practitioner exam.
 
-#### Compute Evolution
+## 4. SLA Monitoring and Student Risk Alerts on AWS
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+**Speaker:** Nguyễn Huỳnh Sơn
 
-#### Amazon Q Developer
+**Main content**
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Designed a learning-data collection system and monitored SLA indicators with CloudWatch Metrics.
+- Built a behavior-analysis flow to detect declining performance or student risk.
+- Sent real-time alerts through Amazon SNS.
 
-### Key Takeaways
+**Value gained**
 
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+- Learned more about monitoring pipelines and event-driven architecture on AWS.
+- Recognized how CloudWatch and SNS can support early-warning solutions in education.
