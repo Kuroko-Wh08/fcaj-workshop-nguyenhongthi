@@ -10,9 +10,7 @@ pre: " <b> 1. </b> "
 
 This section records the AWS learning activities, practical exercises, and MalScanAI deployment work completed during the AWS FCAJ Bootcamp 2026.
 
-{{% notice note %}}
-Obvious date-entry errors in the source report were normalized according to the weekly sequence. The objectives, tasks, technical content, and outcomes remain based on the supplied report.
-{{% /notice %}}
+
 
 | Week | Main focus |
 |:---:|---|

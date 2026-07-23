@@ -10,9 +10,6 @@ pre: " <b> 1. </b> "
 
 Phần này ghi lại quá trình học tập, thực hành AWS và triển khai dự án MalScanAI trong thời gian tham gia AWS FCAJ Bootcamp 2026.
 
-{{% notice note %}}
-Một số lỗi nhập ngày rõ ràng trong tài liệu gốc đã được chuẩn hóa theo thứ tự các tuần. Nội dung chuyên môn, mục tiêu, công việc và kết quả vẫn được giữ theo báo cáo đã cung cấp.
-{{% /notice %}}
 
 | Tuần | Nội dung chính |
 |:---:|---|
