@@ -23,7 +23,7 @@ Deleting Amazon EFS permanently removes the database, accounts, scan history, an
 
 ## 2. Remove the application DNS record
 
-Open **Route 53 â†’ Hosted zones**, select the hosted zone, and remove only the record for:
+Open **Route 53 → Hosted zones**, select the hosted zone, and remove only the record for:
 
 ```text
 malscanai.sadc.io.vn
@@ -33,16 +33,16 @@ Do not delete the entire `sadc.io.vn` hosted zone when other subdomains or syste
 
 ## 3. Delete AWS User Notifications and the CloudWatch alarm
 
-1. Open **AWS User Notifications â†’ Notification configurations**.
+1. Open **AWS User Notifications → Notification configurations**.
 2. Delete `malscanai-alarm-email` and any delivery channel that is no longer required.
-3. Open **CloudWatch â†’ Alarms**.
+3. Open **CloudWatch → Alarms**.
 4. Select `malscanai-unhealthy-target-alarm` and choose **Delete**.
 
 These resources are not the primary cost drivers, but removing them prevents events from obsolete resources.
 
 ## 4. Disable and delete the CloudFront distribution
 
-1. Open **CloudFront â†’ Distributions â†’ malscanai-cloudfront**.
+1. Open **CloudFront → Distributions → malscanai-cloudfront**.
 2. Choose **Disable**.
 3. Wait until the configuration change has finished deploying.
 4. Select the distribution and choose **Delete**.
@@ -52,7 +52,7 @@ A CloudFront distribution must be disabled before it can be deleted.
 
 ## 5. Delete the ECS service
 
-1. Open **ECS â†’ Clusters â†’ malscanai-cluster â†’ Services**.
+1. Open **ECS → Clusters → malscanai-cluster → Services**.
 2. Select `malscanai-service`.
 3. Choose **Delete service** and confirm force deletion when requested.
 4. Wait for the task to become `Stopped` and for its network interface to be released.
@@ -63,16 +63,16 @@ The desired count can be reduced to `0` first for observation, but deleting the 
 
 After the ECS service no longer has a running target:
 
-1. Open **EC2 â†’ Load Balancers** and delete `malscanai-alb`.
+1. Open **EC2 → Load Balancers** and delete `malscanai-alb`.
 2. Wait for the load balancer deletion to complete.
-3. Open **EC2 â†’ Target Groups** and delete `malscanai-streamlit-tg`.
+3. Open **EC2 → Target Groups** and delete `malscanai-streamlit-tg`.
 
 The ALB is billed over time, so it should be removed immediately after the ECS service.
 
 ## 7. Delete the ECS cluster and old task definitions
 
 1. Delete the ECS cluster after it contains no service or task.
-2. Open **ECS â†’ Task definitions â†’ malscanai-task**.
+2. Open **ECS → Task definitions → malscanai-task**.
 3. Deregister revisions that are no longer required.
 
 Stored task definitions do not create compute charges, but cleaning old revisions reduces the risk of deploying an obsolete version.
@@ -80,7 +80,7 @@ Stored task definitions do not create compute charges, but cleaning old revision
 ## 8. Delete EFS
 
 1. Confirm that no ECS task still mounts the file system.
-2. Open **EFS â†’ Access points** and delete `malscanai-data-ap`.
+2. Open **EFS → Access points** and delete `malscanai-data-ap`.
 3. Open `malscanai-efs` and review its mount targets.
 4. Delete the mount targets, or use the Console file-system deletion flow so the Console handles the associated mount targets.
 5. Delete the file system and confirm the correct file-system ID.
@@ -89,7 +89,7 @@ EFS cannot be deleted while active mount targets or dependent resources remain.
 
 ## 9. Delete ECR images and repositories
 
-Open **ECR â†’ Private repositories** and process:
+Open **ECR → Private repositories** and process:
 
 ```text
 malscanai-streamlit
@@ -103,7 +103,7 @@ To preserve recovery capability, retain only the required rollback images. ECR c
 
 ## 10. Delete the Secrets Manager secret
 
-1. Open **Secrets Manager â†’ Secrets**.
+1. Open **Secrets Manager → Secrets**.
 2. Select `malscanai/virustotal-api-key`.
 3. Choose **Delete secret**.
 4. Select an appropriate recovery window and confirm scheduled deletion.
@@ -112,7 +112,7 @@ Never copy the secret value into the report or clean-up screenshots.
 
 ## 11. Delete CloudWatch logs
 
-1. Open **CloudWatch â†’ Log groups**.
+1. Open **CloudWatch → Log groups**.
 2. Select `/ecs/malscanai`.
 3. Delete the log group after preserving the evidence required by the report.
 
@@ -120,10 +120,10 @@ When immediate deletion is not desired, set a seven-day retention period instead
 
 ## 12. Delete the NAT Gateway and release the Elastic IP
 
-1. Open **VPC â†’ NAT gateways**.
+1. Open **VPC → NAT gateways**.
 2. Select the MalScanAI NAT Gateway and choose **Delete NAT gateway**.
 3. Wait until its state becomes `Deleted`.
-4. Open **EC2 â†’ Elastic IP addresses**.
+4. Open **EC2 → Elastic IP addresses**.
 5. Select the Elastic IP that was attached to the NAT Gateway and choose **Release Elastic IP address**.
 
 {{% notice warning %}}
@@ -152,14 +152,14 @@ When a security group or subnet cannot be deleted, inspect remaining network int
 
 Review:
 
-- **Billing and Cost Management â†’ Cost Explorer**
-- **EC2 â†’ Elastic IP addresses**
-- **VPC â†’ NAT gateways**
-- **EC2 â†’ Load Balancers**
-- **ECS â†’ Clusters**
-- **EFS â†’ File systems**
-- **ECR â†’ Repositories**
-- **CloudWatch â†’ Log groups**
+- **Billing and Cost Management → Cost Explorer**
+- **EC2 → Elastic IP addresses**
+- **VPC → NAT gateways**
+- **EC2 → Load Balancers**
+- **ECS → Clusters**
+- **EFS → File systems**
+- **ECR → Repositories**
+- **CloudWatch → Log groups**
 
 Verification table:
 
