@@ -29,9 +29,6 @@ This website documents participation in the **AWS FCAJ Bootcamp 2026**, the lear
 | Internship position | Workforce Bootcamp – First Cloud AI Journey |
 | Internship period | From May 5, 2026 to July 26, 2026 |
 
-{{% notice warning %}}
-This page contains a personal phone number and e-mail address. Review the visibility of this information before publishing the repository or website publicly.
-{{% /notice %}}
 
 ## Project information
 

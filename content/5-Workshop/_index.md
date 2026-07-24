@@ -12,12 +12,17 @@ pre: " <b> 5. </b> "
 
 MalScanAI first ran locally with Docker Compose. When we moved it to AWS, we kept the same two-container layout: a **Streamlit** container for the web interface and a **URL Engine** container for URL analysis. Both containers run inside one ECS Fargate task and communicate through `127.0.0.1`.
 
-This workshop follows the configuration that our team completed in the AWS Console. It is organized into four parts:
+This workshop follows the configuration that our team completed in the AWS Console. It is organized into nine parts:
 
 1. [Project overview](5.1-Project-Overview/)
 2. [Deployment architecture](5.2-Architecture/)
 3. [Configuration steps](5.3-Configuration/)
-4. [Results and demo video](5.4-Results/)
+4. [Testing and validation](5.4-Testing-and-Validation/)
+5. [Monitoring and alerts](5.5-Monitoring-and-Alerts/)
+6. [Cost and optimization](5.6-Cost-and-Optimization/)
+7. [Security and limitations](5.7-Security-and-Limitations/)
+8. [Cleanup](5.8-Cleanup/)
+9. [Results and demo video](5.9-Results/)
 
 At the end of each configuration step, the final screenshot shows that the resource was created or reached a state such as `Available`, `Active`, `Running`, `Healthy`, `Issued`, or `Deployed`. The final workshop page is reserved for the system demonstration video.
 
