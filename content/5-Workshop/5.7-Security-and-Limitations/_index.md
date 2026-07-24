@@ -38,7 +38,7 @@ The team selected Monitor mode because a managed rule had blocked a legitimate S
 
 Direct ALB access returns `403`, while the HTTPS CloudFront domain remains available. This demonstrates that the custom-header rule and default fixed response operate as intended.
 
-![Direct ALB access blocked](/images/5-Workshop/5.5-Testing-and-Validation/direct-alb-403.png)
+![Direct ALB access blocked](/images/5-Workshop/5.4-Testing-and-Validation/direct-alb-403.png)
 
 ## 4. Current limitations
 
